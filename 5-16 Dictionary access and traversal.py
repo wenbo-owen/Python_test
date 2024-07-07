@@ -15,7 +15,7 @@ print(d.get('java','不存在'))
 
 #字典的遍历
 for item in d.items():
-    print(item)   #key=value 组成一个元素
+    print(item)   #key=value 组成一个元素  返回一个元组
 
 #在使用for循环遍历时，分别获取key,value
 for key,value in d.items():
