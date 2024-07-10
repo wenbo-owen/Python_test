@@ -19,6 +19,7 @@ print(tuple(values))
 
 #如何将字典中的数据转成key-value的形式，以元组的方式进行展现
 lst = list(d.items())
+#lst = list(d)  #ypeError: cannot convert dictionary update sequence element #0 to a sequence
 print(lst)
 
 # list 转换为 字典
@@ -38,3 +39,8 @@ print(d)
 # d.clear()
 # print(d)
 print(bool(d))
+
+d5=[10,20,30]
+d6 = d5     # d5 和 d6 是同一个地址
+print('d5的地址是',id(d5))
+print('d6的地址是',id(d6))

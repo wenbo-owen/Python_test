@@ -1,13 +1,14 @@
 s={10,20,30}
+
 #向集合中添加元素
 s.add(100)
 print(s)
 #删除元素
 s.remove(20)
 print(s)
-#清空集合中的元素
-s.clear()
-print(s)
+#清空集合中的元素 ，空的集合是无法遍历的
+#s.clear()
+#print('清空后的集合: ',s)
 
 #集合的遍历操作
 for item in s:
