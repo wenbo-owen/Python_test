@@ -2,10 +2,13 @@ s = '伟大的中国梦'
 #编码 str ->bytes
 
 scode = s.encode(errors='replace')  #默认utf-8,因为utf-8中文占3个字节，英文占1个字节
-print(scode)
+print('utf8编码结果：',scode)
 
 scode_gbk = s.encode('gbk',errors='replace')
-print(scode_gbk)
+print('gbk编码结果：',scode_gbk)
+
+print('-'*50)
+
 
 #编码中的出错问题
 s2='耶✌'
@@ -20,6 +23,7 @@ s2='耶✌'
 scode_error = s2.encode('gbk',errors='replace')
 print(scode_error)
 
+print('-'*50)
 #解码过程 bytes ->str
 print(bytes.decode(scode_gbk,'gbk'))
 
