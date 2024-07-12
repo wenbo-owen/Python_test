@@ -17,3 +17,12 @@ print(s1.find('p')) #-1 没有找到
 
 print(s1.index('o'))
 #print(s1.index('p')) #-1 没有找到
+
+# 判断前缀和后缀
+
+print(s1.startswith('H'))
+print(s1.endswith('P'))
+
+
+print('demo.py'.endswith('.py')) #True
+print('text.txt'.endswith('.txt'))
