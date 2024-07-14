@@ -36,6 +36,7 @@ print('hello你好ⅡⅡⅡ'.isalnum())   #False
 print('hello你好壹贰叁'.isalnum())   #True
 
 #判断字符的大小写
+
 print('-'*50)
 print('HelloWorld'.islower())       #False
 print('helloworld'.islower())       #True
