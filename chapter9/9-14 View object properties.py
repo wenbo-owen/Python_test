@@ -20,3 +20,4 @@ print(dir(per))
  ]
 
 '''
+print(per)  #自动调用了__str__方法
