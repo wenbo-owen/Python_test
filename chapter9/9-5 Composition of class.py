@@ -54,4 +54,15 @@ Student.cm()
 #静态方法，@staticmethod进行修饰的方法,直接使用类名打点调用
 Student.sm()
 
+print('-'*50)
+print(stu.school)
 
+class classmate(Student):
+    pass
+
+mate = classmate('王倩',25)
+print(mate.school)
+
+mate.school = '我改了'
+print(mate.school)
+print(Student.school)
