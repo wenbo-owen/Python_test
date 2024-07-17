@@ -31,3 +31,23 @@ print('len',len(d))
 #字典的删除
 del d
 # print(d)
+
+'''
+------------------------增加的内容-------------------------------
+关于字典中 迭代器的理解
+'''
+print('*'*50)
+d1 = dict({'温博':36,'王倩':35,'温如水':7})
+print(d1)
+
+d1_keys = d1.keys()
+d1_values = d1.values()
+
+print(type(d1_keys),'--->',d1_keys)
+
+print(dir(d1_keys))
+d2 = d1_keys.__iter__()
+print(dir(d2))
+
+for d1_key in d2:
+    print(d1_key,end='->')
