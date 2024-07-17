@@ -91,15 +91,15 @@ class SortedDict(dict):
         def __iter__(self):
             return self
 
-        def __next__(self):
-            if self._idx > self.nr_items:
+        def next(self):
+            if self._idx >= self.nr_items:
                 raise StopIteration
             key = self._keys[self._idx]
             value = self._dict[key]
             self._idx += 1
             return key, value
 
-        # __next__ = next
+        __next__ = next
 
     def __iter__(self):
         return SortedDict.Iterator(self)
