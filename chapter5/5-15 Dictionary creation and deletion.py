@@ -43,11 +43,82 @@ print(d1)
 d1_keys = d1.keys()
 d1_values = d1.values()
 
-print(type(d1_keys),'--->',d1_keys)
+# print(type(d1_keys),'--->',d1_keys)
 
-print(dir(d1_keys))
-d2 = d1_keys.__iter__()
-print(dir(d2))
+# print(dir(d1_keys))
+# d2 = d1_keys.__iter__()
+# print(dir(d2))
+#
+# for d1_key in d2:
+#     print(d1_key,end='->')
 
-for d1_key in d2:
-    print(d1_key,end='->')
+print(type(d1))
+
+print('温博' in d1)
+d1['小蝴蝶'] = 18
+print(d1)
+
+'''
+------------------------增加的内容-------------------------------
+对字典类进行重写
+'''
+print('-'*50)
+
+class Mydict(dict):
+
+    def fun1(self):
+        print('兄弟们,这是我重写的一个类！')
+
+md1 = Mydict({'著三岁':36,'小虎队':35,'泡泡龙':7})
+print(md1)
+
+for item in md1.items():
+    print(item)
+md1.fun1()
+
+'''
+------------------------增加的内容2024/07/17-------------------------------
+对字典类进行重写
+'''
+class SortedDict(dict):
+    class Iterator(object):
+        def __init__(self,sorted_dict):
+           self._dict = sorted_dict
+           self._keys = sorted(self._dict.keys())
+           self.nr_items = len(self._keys)
+           self._idx = 0
+
+        def __iter__(self):
+            return self
+
+        def __next__(self):
+            if self._idx > self.nr_items:
+                raise StopIteration
+            key = self._keys[self._idx]
+            value = self._dict[key]
+            self._idx += 1
+            return key, value
+
+        # __next__ = next
+
+    def __iter__(self):
+        return SortedDict.Iterator(self)
+
+    iterkeys = __iter__
+
+new_d1 = {'SA':'小明','CB':'小房','AC':'小值','ED':'小三','MA':'小率'}
+print(new_d1)
+new_d2 = SortedDict(new_d1)
+print(type(new_d2),'-->',new_d2)
+
+for key in new_d2:      #直接遍历SortedDict对象, 不要用打点item方法
+    print(key)
+
+
+
+
+#
+# d3 = sorted(new_d1)
+# for key in d3:
+#     print(key,'--->',new_d1[key])
+
