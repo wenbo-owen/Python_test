@@ -2,6 +2,9 @@
     re.search(pattern, string,flags=re.IGNORECASE)
     用于在整个字符串中搜索第一个匹配的值，如果起始位置匹配成功，结果为Match对象，否则结果为None
 
+在Python的re模块中，re.search(pattern, string, flags=0)函数用于在字符串中搜索第一个匹配正则表达式的子串。其中，pattern是正则表达式的模式，string是待搜索的字符串，而flags是一个可选参数，用于指定搜索时的额外选项。
+
+re.I是flags参数的一个选项，它代表“忽略大小写”（IGNORECASE）的搜索。当你设置re.I作为flags参数时，搜索过程将不会区分大小写字母，即大写字母和小写字母被视为等同。
 '''
 
 
