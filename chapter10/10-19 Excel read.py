@@ -1,4 +1,9 @@
 import openpyxl
+import PySide6.QtWidgets
+
+QLabel = QtWidgets.QLabel()
+
+
 # 打开工作簿
 workbook = openpyxl.load_workbook('weather.xlsx')
 
