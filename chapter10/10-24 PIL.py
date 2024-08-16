@@ -13,3 +13,4 @@ r,g,b = im.split()
 
 om = Image.merge(mode='RGB',bands=(r,b,g))
 om.save('new_flower.jpg')
+
