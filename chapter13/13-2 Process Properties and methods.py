@@ -36,3 +36,4 @@ if __name__ == '__main__':
         print(p2.name,'是否执行完毕',p2.is_alive())
 
     print('父进程执行完毕')
+    print('hello')
