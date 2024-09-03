@@ -1,0 +1,21 @@
+from socket import socket, AF_INET, SOCK_DGRAM
+
+#(1) 创建socket对象
+recv_socket = socket(AF_INET, SOCK_DGRAM)
+
+#(2) 绑定IP地址和端口
+recv_socket.bind(('192.168.31.22', 9000))
+
+#(3) 接收数据   
+print("等待接收数据...")
+data, addr = recv_socket.recvfrom(1024)
+print(f"接收到的数据类型为:{type(data)}\n")
+print(f"接收到对象IP地址为:{addr}\n")
+
+print(data[0])
+print(data[1])
+
+
+#(5) 关闭socket
+recv_socket.close()
+print("客户端退出")
