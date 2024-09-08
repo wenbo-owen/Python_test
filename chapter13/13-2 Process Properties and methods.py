@@ -3,8 +3,9 @@ import os,time
 
 # 函数式方式创建子进程
 def sub_process(name):
-    print(f'子进程的PID:{os.getpid()},父进程的PID:{os.getppid()}，--------{name}')
-    time.sleep(1)
+    while True:
+        print(f'子进程的PID:{os.getpid()},父进程的PID:{os.getppid()}，--------{name}')   # name 是位置参数
+        time.sleep(1)
 
 def sub_process2(name):
     print(f'子进程的PID:{os.getpid()},父进程的PID:{os.getppid()}，--------{name}')
@@ -29,11 +30,11 @@ if __name__ == '__main__':
         print(p1.name,'pid是：',p1.pid)
         print(p2.name,'pid是：',p2.pid)
 
-        # p1.join()  # 主进程要等待p1进程执行完毕
-        # p2.join()  # 主进程要等待p2进程执行完毕
+        p1.join()  # 主进程要等待p1进程执行完毕
+        p2.join()  # 主进程要等待p2进程执行完毕
 
-        print(p1.name,'是否执行完毕',p1.is_alive())
-        print(p2.name,'是否执行完毕',p2.is_alive())
+        print(p1.name,'是否再次执行完毕',p1.is_alive())
+        print(p2.name,'是否再次执行完毕',p2.is_alive())
 
     print('父进程执行完毕')
     print('hello')
