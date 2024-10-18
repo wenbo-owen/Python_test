@@ -15,8 +15,12 @@ print(lst1*3)
 print(len(lst3))
 print(max(lst3))
 print(min(lst3))
-print(lst1.count('he'))
-print(lst1.index('o'))
+
+print('-'*30)
+print(f'list1 is {lst1}')
+print(f'he在列表中出现了{lst1.count("he")}次') 
+print(f'world在列表中出现了{lst1.count("world")}次') # 如果采用f''的话，''内部需要调用字符串用双引号""
+print(f'o在lst1中的索引是{lst1.index("o")}')
 
 
 #列表的删除操作

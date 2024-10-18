@@ -18,5 +18,5 @@ def sale_ticket():
 if  __name__ == '__main__':
 
     for i in range(2):
-        t = Thread(target=sale_ticket)
+        t = Thread(target=sale_ticket)  #多线程共享数据不安全问题 
         t.start()

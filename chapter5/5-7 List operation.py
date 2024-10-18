@@ -24,13 +24,14 @@ print(lst)
 lst.remove('world')
 print('删除元素之后的列表',lst,id(lst))  #id() 输出内存地址
 
+print('-'*30)
 #使用pop(index)根据索引将元素取出，然后再删除
 print(lst.pop(1))
 print(lst)
 
 #清除列表中所有元素
 # lst.clear()
-# print(lst,id(lst))
+# print(lst,id(lst))  
 
 #列表的反向
 lst.reverse()   #不会产生新的列表，在原列表基础上进行反向
@@ -38,12 +39,13 @@ print(lst)
 
 # 列表的拷贝，将产生一个新的列表对象
 new_list = lst.copy()
-print('new_list',new_list,id(new_list))
+print('new_list',new_list,'new_list_id is',id(new_list))
 
 #列表元素的修改
 #根据索引进行修改
 lst[1] = 'mysql'
 print(lst )
+print(new_list)
 
 
 

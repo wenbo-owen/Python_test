@@ -25,7 +25,7 @@ if __name__ == '__main__':
    #创建消息队列
    q=Queue()  # 队列无上限个数
 
-   p1 = Process(target=write_msg,args=(q,))
+   p1 = Process(target=write_msg,args=(q,))   #带参数的
    p2 = Process(target=read_msg,args=(q,))
 
    p1.start()

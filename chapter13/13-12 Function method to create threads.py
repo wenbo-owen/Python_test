@@ -28,7 +28,13 @@ if __name__ == '__main__':
     for item in lst:
         item.start()
 
-    # for item in lst:
-    #     item.join()
+    for item in lst:    #都是阻塞 主线程
+        item.join()
 
     print("运行的时间是：",time.time()-start)
+
+# 三个线程并行执行的任务是什么？ 
+# 主线程负责执行 main中的代码
+# Thread-1 线程 执行三次循环
+# Thread-2 线程 执行三次循环 
+#三个线程是并发执行的，谁先执行不一定 Thread-1 和 Thread-2

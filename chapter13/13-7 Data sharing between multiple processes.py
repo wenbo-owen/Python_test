@@ -19,7 +19,7 @@ def sub():
 if __name__ == '__main__':
     #父进程
     print('父进程开始执行')
-    print('a=',a)
+    print('a=',a) 
     #创建加的子进程
     p1=Process(target=add)
     #创建减的子进程
