@@ -1,3 +1,8 @@
+
+#2025/1/31 复习一次
+
+
+
 lst=['helloo','world','98','100.5']
 print('lst是:',lst)
 
@@ -20,7 +25,7 @@ print('lst3的最小值是：',min(lst3))
 
 print('-'*30)
 print(f'list1 是 {lst1}')
-print(f'he在列表中出现了{lst1.count("he")}次') 
+print(f'he在列表中出现了{lst1.count("he")}次')         # 如果采用f''的话，''内部需要调用字符串用双引号""， 'he'这个元素在list1中出现的次数
 print(f'world在列表中出现了{lst1.count("world")}次') # 如果采用f''的话，''内部需要调用字符串用双引号""
 print(f'o在lst1中的索引是{lst1.index("o")}')
 
