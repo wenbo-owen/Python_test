@@ -5,6 +5,9 @@
 
 
 """
+
+#2025/1/31 复习一次
+
 # 第一种
 lst = ['hello', 'world', 'python','php']
 

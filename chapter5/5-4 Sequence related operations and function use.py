@@ -1,6 +1,9 @@
 s = 'helloworld'
 print('e在hello_world中存在吗？','e'in s)
 print('v在hello_world中存在吗？','v'in s)
+print('e在wenbo中存在吗？','e'in 'wenbo')
+print('e在wenbo中存在吗？'+str('e' in 'wenbo'))
+
 
 print('-'*40)
 #not in 的
